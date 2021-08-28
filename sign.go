@@ -3,7 +3,6 @@ package quectel
 import (
 	"crypto/sha1"
 	"encoding/hex"
-	"fmt"
 	"net/url"
 	"sort"
 	"strings"
@@ -22,7 +21,6 @@ func (c *client) sign(param url.Values) string {
 	}
 	str += c.appSecret
 
-	fmt.Println(str)
 	md5Ctx := sha1.New()
 	md5Ctx.Write([]byte(str))
 	cipherStr := md5Ctx.Sum(nil)
