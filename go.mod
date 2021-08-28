@@ -1,1 +1,1 @@
-module "quectel"
+module github.com/mingguang615/quectel
