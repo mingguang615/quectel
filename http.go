@@ -19,7 +19,7 @@ func (c *client) getUrl(param url.Values) string {
 	return fmt.Sprintf("%s?%s", api, param.Encode())
 }
 
-func (c *client) post(param url.Values, result interface{}) (error) {
+func (c *client) post(param url.Values, result interface{}) error {
 	if param == nil {
 		param = url.Values{}
 	}
@@ -38,6 +38,5 @@ func (c *client) post(param url.Values, result interface{}) (error) {
 	if err != nil {
 		return err
 	}
-	fmt.Println(string(body))
 	return json.Unmarshal(body, result)
 }
