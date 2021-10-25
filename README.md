@@ -3,6 +3,12 @@
 ## Usage
 
 ```
+go get github.com/mingguang615/quectel
+```
+
+## Example
+
+```
 func main(){
     client := NewClient("123", "AAAAAAAAAA")
     resp, err := client.GetCardInfo("89860478102050071500")
